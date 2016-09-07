@@ -20,7 +20,7 @@ if [[ $result =~ vd|sd ]];then
     svctm=$(echo $result|awk '{print $(NF-1)}')
     util=$(echo $result|awk '{print $NF}')
     for key in rsec wsec rKB wKB await svctm util;do
-    echo    sender iostats[$dev,$key] $(eval echo \${$key})
+        sender iostats[$dev,$key] $(eval echo \${$key})
     done
     echo Succeeded
 else
